@@ -1,0 +1,11 @@
+package com.spms.repository;
+
+import com.spms.model.Grade;
+import com.spms.model.Student;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface GradeRepository extends JpaRepository<Grade, Long> {
+    List<Grade> findByStudent(Student student);
+}
